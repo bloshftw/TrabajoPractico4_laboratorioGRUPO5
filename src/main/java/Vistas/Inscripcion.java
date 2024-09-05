@@ -7,6 +7,7 @@ package Vistas;
 import com.mycompany.trabajopractico4_laboratorio.Alumno;
 import com.mycompany.trabajopractico4_laboratorio.Materia;
 import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -72,6 +73,11 @@ public class Inscripcion extends javax.swing.JInternalFrame {
         });
 
         inscripcion_btn_inscribir.setText("Inscribir");
+        inscripcion_btn_inscribir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inscripcion_btn_inscribirActionPerformed(evt);
+            }
+        });
 
         inscripcion_btn_salir.setText("Salir");
 
@@ -126,7 +132,29 @@ public class Inscripcion extends javax.swing.JInternalFrame {
 
     private void InscripcionComboBoxAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscripcionComboBoxAlumnoActionPerformed
         
+       
+        
     }//GEN-LAST:event_InscripcionComboBoxAlumnoActionPerformed
+
+    private void inscripcion_btn_inscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inscripcion_btn_inscribirActionPerformed
+        
+         Alumno alumnoSeleccionado = (Alumno) InscripcionComboBoxAlumno.getSelectedItem();
+        Materia materiaSeleccionada = (Materia) inscripcion_combobox_materia.getSelectedItem();
+        
+        if (alumnoSeleccionado != null && materiaSeleccionada != null){
+        
+            System.out.println(alumnoSeleccionado.getNroLegajo());
+            System.out.println(materiaSeleccionada.getIdMateria());
+            
+        alumnoSeleccionado.agregarMateria(materiaSeleccionada);
+            System.out.println(alumnoSeleccionado.getApellido());
+            JOptionPane.showMessageDialog(this, "El alumno: " + alumnoSeleccionado.getNombre() + " " + alumnoSeleccionado.getApellido() + "fue inscripto correctamente.");
+        } else {
+        
+        JOptionPane.showMessageDialog(this, "El alumno no fue inscripto.");
+        }
+        
+    }//GEN-LAST:event_inscripcion_btn_inscribirActionPerformed
 
 
     

@@ -13,6 +13,7 @@ private String nombre;
 public HashSet<Materia> materias;
 
     public Alumno() {
+        this.materias = new HashSet<>();
     }
 
 
