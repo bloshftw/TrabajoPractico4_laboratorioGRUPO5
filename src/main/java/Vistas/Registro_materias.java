@@ -42,6 +42,12 @@ public class Registro_materias extends javax.swing.JInternalFrame {
 
         jLabel4.setText("AÑO AL QUE PERTENECE:");
 
+        materias_input_anioMateria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                materias_input_anioMateriaActionPerformed(evt);
+            }
+        });
+
         btn_materias_guardar.setText("Guardar");
         btn_materias_guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,10 +154,25 @@ public class Registro_materias extends javax.swing.JInternalFrame {
         
         mostrarMaterias();
         
+        limpiarTexto();
+        
+        
     }//GEN-LAST:event_btn_materias_guardarActionPerformed
 
+    public void limpiarTexto(){
+    materias_input_codigoMateria.setText("");
+    materias_input_nombreMateria.setText("");
+    materias_input_anioMateria.setText("");
+    
+    }
+    
+    
     private void btn_materias_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_materias_salirActionPerformed
      this.dispose();    }//GEN-LAST:event_btn_materias_salirActionPerformed
+
+    private void materias_input_anioMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_materias_input_anioMateriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_materias_input_anioMateriaActionPerformed
 
     public void mostrarMaterias() {
     // Suponiendo que 'alumno' es el HashSet de tipo Alumno
