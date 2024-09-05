@@ -156,7 +156,7 @@ public class Registro_materias extends javax.swing.JInternalFrame {
     public void mostrarMaterias() {
     // Suponiendo que 'alumno' es el HashSet de tipo Alumno
     for (Materia mat : lista_materias) {
-        System.out.println("Nombre materia: " + mat.getNombre());
+        System.out.println("Nombre materia: " + mat.getNombre() + " Año de la materia: " + mat.getAnio() + " codigo de la materia: " + mat.getIdMateria());
     }
 }
     

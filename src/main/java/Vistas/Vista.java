@@ -141,12 +141,12 @@ public class Vista extends javax.swing.JFrame {
     
     /*ASIGNACION DE ALUMNOS A MATERIAS*/
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-       escritorio.removeAll();
-       escritorio.repaint();
-       Inscripcion formularioInscripcion = new Inscripcion(Vista.lista_alumnos, Vista.lista_materias);
-       formularioInscripcion.setVisible(true);
-       escritorio.add(formularioInscripcion);
-       escritorio.moveToFront(formularioInscripcion);
+    
+        Inscripcion inscripcionAlumno = new Inscripcion(Vista.lista_alumnos, Vista.lista_materias);
+        inscripcionAlumno.setVisible(true);
+        escritorio.add(inscripcionAlumno);
+        escritorio.moveToFront(inscripcionAlumno);
+        
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
