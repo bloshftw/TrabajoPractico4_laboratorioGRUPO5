@@ -24,6 +24,8 @@ public class Inscripcion extends javax.swing.JInternalFrame {
         
         initComponents();
         this.setTitle("Formulario de inscripcion");
+        agregarMateria();
+        agregarAlumno();
     }
 
    
@@ -31,16 +33,17 @@ public class Inscripcion extends javax.swing.JInternalFrame {
     
         for(Alumno alu: alum){
         
-        
+        InscripcionComboBoxAlumno.addItem(alu);
             
         }
-    
     }
-    
     
     private void agregarMateria(){
     
+    for(Materia m: mat){
+    inscripcion_combobox_materia.addItem(m);
     
+    }
     
     
     }
@@ -51,8 +54,8 @@ public class Inscripcion extends javax.swing.JInternalFrame {
         inscripcion_jlabel_titulo = new javax.swing.JLabel();
         inscripcion_jlabel_alumno = new javax.swing.JLabel();
         inscripcion_jlabel_materia = new javax.swing.JLabel();
-        javax.swing.JComboBox<Alumno> InscripcionComboBoxAlumno = new javax.swing.JComboBox<>();
-        javax.swing.JComboBox<Materia> inscripcion_combobox_materia = new javax.swing.JComboBox<>();
+        InscripcionComboBoxAlumno = new javax.swing.JComboBox<>();
+        inscripcion_combobox_materia = new javax.swing.JComboBox<>();
         inscripcion_btn_inscribir = new javax.swing.JButton();
         inscripcion_btn_salir = new javax.swing.JButton();
 
@@ -131,8 +134,10 @@ public class Inscripcion extends javax.swing.JInternalFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<Alumno> InscripcionComboBoxAlumno;
     private javax.swing.JButton inscripcion_btn_inscribir;
     private javax.swing.JButton inscripcion_btn_salir;
+    private javax.swing.JComboBox<Materia> inscripcion_combobox_materia;
     private javax.swing.JLabel inscripcion_jlabel_alumno;
     private javax.swing.JLabel inscripcion_jlabel_materia;
     private javax.swing.JLabel inscripcion_jlabel_titulo;

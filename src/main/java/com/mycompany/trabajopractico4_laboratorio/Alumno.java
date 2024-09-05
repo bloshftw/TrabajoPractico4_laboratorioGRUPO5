@@ -64,6 +64,14 @@ public HashSet<Materia> materias;
 
     /*Funciones*/
     
+    
+    
+    public String toString(){
+    
+        return apellido + " " + nombre;
+    
+    }
+    
     public void agregarMateria(Materia materia){
         if (materias.add(materia)){
             System.out.println("Se inscribio correctamente al alumno en la materia: " + materia.getNombre());

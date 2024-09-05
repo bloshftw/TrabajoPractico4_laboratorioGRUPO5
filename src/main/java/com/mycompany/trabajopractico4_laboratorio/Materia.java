@@ -48,7 +48,11 @@ private int anio;
 
     /*FUNCIONES*/
     
+    public String toString(){
     
+        return nombre;
+    
+    }
     
     
 }
