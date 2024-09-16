@@ -10,7 +10,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author Lucia
+ * @author grupo 5 xd
  */
 public class Vista extends javax.swing.JFrame {
 
