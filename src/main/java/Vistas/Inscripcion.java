@@ -80,6 +80,11 @@ public class Inscripcion extends javax.swing.JInternalFrame {
         });
 
         inscripcion_btn_salir.setText("Salir");
+        inscripcion_btn_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inscripcion_btn_salirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,6 +160,10 @@ public class Inscripcion extends javax.swing.JInternalFrame {
         }
         
     }//GEN-LAST:event_inscripcion_btn_inscribirActionPerformed
+
+    private void inscripcion_btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inscripcion_btn_salirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_inscripcion_btn_salirActionPerformed
 
 
     

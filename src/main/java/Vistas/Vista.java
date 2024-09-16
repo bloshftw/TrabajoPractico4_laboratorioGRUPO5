@@ -21,7 +21,7 @@ public class Vista extends javax.swing.JFrame {
     public Vista() {
         initComponents();
         setSize(800,600);
-        
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -93,6 +93,11 @@ public class Vista extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         jMenu4.setText("Salir");
+        jMenu4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu4ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
@@ -135,6 +140,7 @@ public class Vista extends javax.swing.JFrame {
         rgm.setVisible(true);
         escritorio.add(rgm);
         escritorio.moveToFront(rgm);
+    
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     
@@ -146,8 +152,13 @@ public class Vista extends javax.swing.JFrame {
         inscripcionAlumno.setVisible(true);
         escritorio.add(inscripcionAlumno);
         escritorio.moveToFront(inscripcionAlumno);
+       
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
+       this.dispose();
+    }//GEN-LAST:event_jMenu4ActionPerformed
 
     /**
      * @param args the command line arguments
